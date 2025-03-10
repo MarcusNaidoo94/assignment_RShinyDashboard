@@ -14,8 +14,10 @@ dark_theme <- theme(
   panel.grid.minor = element_line(color = "#444444"),  # Subtle minor gridlines
   axis.text = element_text(color = "#EAEAEA"),  # Light-colored axis labels
   axis.title = element_text(color = "#FFFFFF"),  # White axis titles
-  plot.title = element_text(color = "#FFFFFF", size = 14, face = "bold"),  # Title styling
-  legend.background = element_rect(fill = "#2D2D2D"),  # Dark legend background
+  plot.title = element_text(color = "#FFFFFF", 
+                            size = 14, 
+                            face = "bold"),  # Title styling
+  legend.background = element_rect(fill = "#2D2D2D"),  # Dark background
   legend.text = element_text(color = "#EAEAEA"),  # Light text in legend
   legend.title = element_text(color = "#FFFFFF")  # White legend title
 )
@@ -59,7 +61,8 @@ visualize_industry_distribution <- function(df, study_field) {
     unnest(cols = Industry) %>% 
     count(Industry, sort = TRUE)
   
-  p <- ggplot(industry_counts, aes(x = fct_reorder(Industry, n), 
+  p <- ggplot(industry_counts, aes(x = fct_reorder
+                                   (Industry, n), 
                                    y = n, 
                                    fill = Industry)) + 
     geom_col(show.legend = FALSE) + 
