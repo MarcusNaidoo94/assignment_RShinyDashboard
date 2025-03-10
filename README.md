@@ -40,4 +40,5 @@ Problem-Solving Findings
 - In case of any outstanding issues, please consult the developer.
 
 Contact Information
-For questions or problems that need fixes, please contact via GitHub Issues on the repository site.
+
+For questions or problems that need fixes, please contact via GitHub on issues with the repository site.
